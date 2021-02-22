@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*,*:before,*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#balance-replenishment-with-phone-number-form,
+#balance-replenishment-with-account-number-form {
+	width: 900px;
+	margin: 70px auto;
+}
+
+.balance-replenishment-data {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+#balance-replenishment-with-phone-number-form .balance-replenishment-input-details,
+#balance-replenishment-with-account-number-form .balance-replenishment-input-details {
+	margin: 10px;
+	width: 100%;
+}
+
+.balance-replenishment-amount .form-deposit-amount-range {
+	font-size: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+#balance-replenishment-with-phone-number-form .form-loading,
+#balance-replenishment-with-account-number-form .form-loading {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+#balance-replenishment-with-phone-number-form .submit-form-section #phone-number-form-submit-btn,
+#balance-replenishment-with-account-number-form .submit-form-section #account-number-form-submit-btn {
+	display: block;
+	margin: 20px auto;
+}
+
+#balance-replenishment-with-phone-number-form:not(.cancel-mute-error-alerts) .form-control.mute-error-alerts,
+#balance-replenishment-with-account-number-form:not(.cancel-mute-error-alerts) .form-control.mute-error-alerts {
+	background-image: none;
+	border: 1px solid #ced4da;
+}
+
+#balance-replenishment-with-phone-number-form:not(.cancel-mute-error-alerts) .form-control.mute-error-alerts:focus,
+#balance-replenishment-with-account-number-form:not(.cancel-mute-error-alerts) .form-control.mute-error-alerts:focus {
+	border-color: #80bdff;
+	box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#balance-replenishment-with-phone-number-form:not(.cancel-mute-error-alerts) .mute-error-alerts ~.invalid-feedback,
+#balance-replenishment-with-account-number-form:not(.cancel-mute-error-alerts) .mute-error-alerts ~.invalid-feedback {
+	display:none;
+}
+
+#balance-replenishment-with-phone-number-form .incorrect-filled-error ~.invalid-feedback,
+#balance-replenishment-with-account-number-form .incorrect-filled-error ~.invalid-feedback{
+	display:block;
+}
+
+#balance-replenishment-with-phone-number-form .form-control.incorrect-filled-error,
+#balance-replenishment-with-account-number-form .form-control.incorrect-filled-error {
+	border-color: #dc3545;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+
+}
+#balance-replenishment-with-phone-number-form .form-control.incorrect-filled-error:focus,
+#balance-replenishment-with-account-number-form .form-control.incorrect-filled-error:focus {
+	box-shadow: 0 0 0 0.2rem rgb(220, 53, 69,0.25);
+	border-color: #dc3545;
+}

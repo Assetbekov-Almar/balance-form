@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Balance Replenishment Form</title>
+</head>
+<body>
+<div class="success-message alert alert-success d-none" role="alert">
+	Запрос на пополнение баланса успешно отправлен на сервер.
+</div>
+<form action="file.php" class="needs-validation was-validated" novalidate id="balance-replenishment-with-phone-number-form" autocomplete="off" method="POST">
+	<div class="balance-replenishment-data border border-primary rounded">
+
+		<div class="balance-replenishment-phone-number balance-replenishment-input-details">
+			<label for="form-phone-number">Номер телефона:</label>
+			<input type="text" name="form-phone-number" class="form-control input-to-validate" pattern=".{16}" data-shaping-pattern="+. ... ...-..-.." data-begin-value="7999" id="form-phone-number" required>
+			<div class="invalid-feedback">
+				Укажите полностью номер телефона, начинающийся с 7999, пожалуйста.
+			</div>
+		</div>
+
+		<div class="balance-replenishment-amount balance-replenishment-input-details">
+			<label for="phone-number-form-deposit-amount">Сумма пополнения:</label>
+			<span class="form-deposit-amount-range">(300-10000 руб.)</span>
+			<input type="number" name="phone-number-form-deposit-amount" class="form-control input-to-validate" min="300" max="10000" id="phone-number-form-deposit-amount" required>
+			<div class="invalid-feedback">
+				Укажите сумму пополнения в указанном диапазоне, пожалуйста.
+			</div>
+		</div>
+
+		<div class="balance-replenishment-payment balance-replenishment-input-details">
+			<label for="phone-number-form-to-pay-amount">К оплате:</label>
+			<input type="number" name="phone-number-form-to-pay-amountt" class="form-control to-pay-amount-input" id="phone-number-form-to-pay-amount" readonly>
+		</div>
+
+	</div>
+
+	<div class="submit-form-section">
+		<input class="btn btn-primary btn-lg" id="phone-number-form-submit-btn" type="submit" value="Submit">
+	</div>
+</form>
+
+<form action="file_1.php" class="needs-validation was-validated" novalidate id="balance-replenishment-with-account-number-form" autocomplete="off" method="POST">
+	<div class="balance-replenishment-data border border-primary rounded">
+
+		<div class="balance-replenishment-account-number balance-replenishment-input-details">
+			<label for="form-account-number">Номер счёта:</label>
+			<input type="text" name="form-account-number" class="form-control input-to-validate" pattern=".{14,18}" data-shaping-pattern=".... .... .... ..." data-begin-value="41001" data-min-length="14" id="form-account-number" required>
+			<div class="invalid-feedback">
+				Укажите полностью номер счёта, начинающийся с 4100 1, пожалуйста.
+			</div>
+		</div>
+
+		<div class="balance-replenishment-amount balance-replenishment-input-details">
+			<label for="account-number-form-deposit-amount">Сумма пополнения:</label>
+			<span class="form-deposit-amount-range">(300-10000 руб.)</span>
+			<input type="number" name="account-number-form-deposit-amount" class="form-control input-to-validate" min="300" max="10000" id="account-number-form-deposit-amount" required>
+			<div class="invalid-feedback">
+				Укажите сумму пополнения в указанном диапазоне, пожалуйста.
+			</div>
+		</div>
+
+		<div class="balance-replenishment-payment balance-replenishment-input-details">
+			<label for="account-number-form-to-pay-amount">К оплате:</label>
+			<input type="number" name="account-number-form-to-pay-amount" class="form-control to-pay-amount-input" id="account-number-form-to-pay-amount" readonly>
+		</div>
+
+	</div>
+
+	<div class="submit-form-section">
+		<input class="btn btn-primary btn-lg" id="account-number-form-submit-btn" type="submit" value="Submit">
+	</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="module" src="script.js"></script>	
+</body>
+</html>
